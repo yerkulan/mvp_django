@@ -6,7 +6,8 @@
 </head>
 <body>
 
-<form action="{% url 'thanks' %}", method="">
+<form action="{% url 'thanks' %}", method="POST">
+    {% csrf_token %}
     <label>Имя</label>
     <input name="name">
     <label>Телефон</label>

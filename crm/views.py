@@ -9,8 +9,8 @@ def first_page(request):
 
 
 def thanks_page(request):
-    name = request.GET['name']
-    phone = request.GET['phone']
+    name = request.POST['name']
+    phone = request.POST['phone']
     order = Order(order_name=name, order_phone=phone)
     order.save()
     return render(
