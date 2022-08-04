@@ -6,6 +6,20 @@
 </head>
 <body>
 
+<form action="{% url 'thanks' %}", method="">
+    <label>Имя</label>
+    <input name="name">
+    <label>Телефон</label>
+    <input name="phone">
+    <button type="submit">Отправить</button>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 {% if object_list %}
 <table>
     <tr>
