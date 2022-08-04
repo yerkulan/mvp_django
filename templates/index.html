@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if object_list %}
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Дата</th>
+        <th>Имя</th>
+        <th>Телефон</th>
+    </tr>
+    {% for obj in object_list %}
+    <tr>
+        <th>{{ obj.id }}</th>
+        <th>{{ obj.order_dt }}</th>
+        <th>{{ obj.order_name }}</th>
+        <th>{{ obj.order_phone }}</th>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+Нет данных
+{% endif %}
+
+</body>
+</html>
