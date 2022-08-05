@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+
+<img src="{% static 'img\cat.jpeg' %}" height="300">
 
 <form action="{% url 'thanks' %}", method="POST">
     {% csrf_token %}
-    <label>Имя</label>
-    <input name="name">
-    <label>Телефон</label>
-    <input name="phone">
+    {{ form.as_p }}
     <button type="submit">Отправить</button>
 </form>
 
@@ -41,6 +37,4 @@
 {% else %}
 Нет данных
 {% endif %}
-
-</body>
-</html>
+{% endblock %}
