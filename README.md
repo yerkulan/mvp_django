@@ -1,9 +1,9 @@
 #Migration:
-##python manage.py migrate
+$ python manage.py migrate
 
 #Start project: 
-##python manage.py runserver
+$ python manage.py runserver
 
 #Create super_user
-##python manage.py createsuperuser
+$ python manage.py createsuperuser
 
