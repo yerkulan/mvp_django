@@ -17,7 +17,7 @@ class Order(models.Model):
     order_dt = models.DateTimeField(auto_now=True)
     order_name = models.CharField(max_length=200, verbose_name='Имя')
     order_phone = models.CharField(max_length=200, verbose_name='Телефон')
-    order_status = models.ForeignKey(StatusCrm, on_delete=models.PROTECT, null=True, verbose_name='Статус')
+    order_status = models.ForeignKey(StatusCrm, on_delete=models.PROTECT, null=True, default=1, verbose_name='Статус')
 
     def __str__(self):
         return self.order_name
